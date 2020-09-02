@@ -33,10 +33,10 @@ class CreditCard extends Component {
     getValue(name) {
         return this[name]();
     }
-    componentWillReceiveProps(nextProps) {
+    UNSAFE_componentWillReceiveProps(nextProps) {
         this.updateType(nextProps);
     }
-    componentWillMount() {
+    UNSAFE_componentWillMount() {
         this.updateType(this.props);
     }
     updateType(props) {
